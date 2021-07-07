@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Help Desk | Tickets</title>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+
+      <!-- Navbar -->
+      <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+          </li>
+          <li class="nav-item d-none d-sm-inline-block">
+            <H1 style="color:rgb(0, 153, 255);font-weight:bold"> Welcome to
+              <span id="company"> </span>
+              Customer Help Desk Service
+            </H1>
+          </li>
+        </ul>
+      </nav>
+      <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a href="#" class="brand-link">
+          Role : <span id="roleid"></span>
+          <br>ID : <span id="userid"></span>
+          <br>Name : <span id="username"></span>
+        </a>
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <!-- Sidebar Menu -->
+          <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+  
+              <li class="nav-item menu-open">
+                <a href="index.html" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p> Dashboard </p>
+                </a>
+              </li>
+  
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-th"></i>
+                  <p>
+                    Tickets
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="tickets.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>View All Tickets</p>
+                    </a>
+                  </li>
+                  <li id="createticketmenu" class="nav-item">
+                    <a href="createticket.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Create New Ticket</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+  
+              <li id="usermenu" class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-th"></i>
+                  <p>
+                    Users
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="users.html" class="nav-link active">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>View All Users</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="createuser.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Create New User</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+  
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-th"></i>
+                  <p>
+                    Settings
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="profile.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>View Profile</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="editprofile.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Update Profile</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="changepwd.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Change Password</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="logout.html" class="nav-link">
+                  <i class="nav-icon fas fa-th"></i>
+                  <p> Logout <span class="right badge badge-danger"></span></p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+      </aside>
+      <!-- /.navbar -->
+
+    <!-- Content Wrapper. Contains page content -->
+
+    <div class="content-wrapper">
+      <!-- Main content -->
+      <section class="content">
+        <!-- Main code -->
+        <input id="btnedituser" type="button" value="Edit Selected User"></input>
+        <input id="btndisplayuserinfo" type="button" value="Display Selected User Information"></input>
+        <input id="btncreateticketforuser" type="button" value="Create Ticket for Selected User"></input>
+
+        <table id="example">
+          <thead>
+            <tr>
+              <th>UserId</th>
+              <th>Name</th>
+              <th>Mobile</th>
+              <th>EmailId</th>
+              <th>RoleId</th>
+              <th>StatusId</th>
+              <th>AdharId</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th>UserId</th>
+              <th>Name</th>
+              <th>Mobile</th>
+              <th>EmailId</th>
+              <th>RoleId</th>
+              <th>StatusId</th>
+              <th>AdharId</th>
+            </tr>
+          </tfoot>
+        </table>
+        <!-- Main code -->
+      </section>
+      <!-- /.content -->
+    </div>
+
+    <!-- /.content-wrapper -->
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <strong>Copyright &copy; 2021 <a href="#"> <span id="companyfooter"> </span> </a>.</strong>
+      All rights reserved.
+    </footer>
+    <!-- /.Footer -->
+
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- jQuery -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  <script src="dist/js/adminlte.js"></script>
+  <script src="dist/js/Common.js"></script>
+  <script src="dist/js/jquerysession.js"></script>
+  <script src="dist/js/users.js"></script>
+</body>
+
+</html>
